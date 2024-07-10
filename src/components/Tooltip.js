@@ -1,36 +1,36 @@
 import React, { useState } from 'react'
 
 const Tooltip = (props) => {
-    const [check1,setcheck1]=useState(false);
-    const [check2,setcheck2]=useState(false);
+    const [check1,setcheck1]=useState('hide');
+    const [check2,setcheck2]=useState('hide');
     const handle_enter=(check)=>{
         console.log('hi in enter mouse');
         if (check=='first') {
-         setcheck1(true);
+         setcheck1('tooltiptext');
         }else{
-            setcheck2(true);
+            setcheck2('tooltiptext');
             console.log('hi in else');
         }
 
     }
     const handleleave=(check)=>{
         if (check=='first') {
-            setcheck1(false);
+            setcheck1('hide');
            }else{
-               setcheck2(false);
+               setcheck2('hide');
            }
     }
   return (
     <div>
-        <div className='now'>
+       
        
         <h2 onMouseEnter={()=>handle_enter('first')} onMouseLeave={()=>handleleave('first')} className='tooltip'>
-        {check1 && <div className='tooltiptext'>{props.text.first}</div>}  {props.children.first}</h2>
-        </div>
-        <div className='now'>
+        <div className={check1} >{props.text.first}</div> {props.children.first}</h2>
+        
+        
         <p onMouseEnter={()=>{handle_enter('second')}} onMouseLeave={()=>{ handleleave('second')}} className='tooltip'>
-        {check2 && <div className='tooltiptext'>{props.text.second}</div>}{props.children.second}</p>
-        </div>
+        <div className={check2} >{props.text.second}</div>{props.children.second}</p>
+       
     </div>
   )
 }

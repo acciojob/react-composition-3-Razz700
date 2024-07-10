@@ -7,11 +7,13 @@ cursor: pointer;
 .tooltip{
     padding: 30px;
     margin: 10px;
+    position: relative;
 }
 .now{
     position: relative;
 }
 .tooltiptext{
+    display: block;
     z-index: 1;
     background-color: red;
     width:150px;
@@ -21,4 +23,7 @@ cursor: pointer;
     position: absolute;
     top: -40px;
     left: 10px;
+}
+.hide{
+    display: none;
 }
