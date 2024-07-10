@@ -1,1 +1,24 @@
-
+body{
+    padding-top: 35px;
+}
+.tooltip:hover{
+cursor: pointer;
+}
+.tooltip{
+    padding: 30px;
+    margin: 10px;
+}
+.now{
+    position: relative;
+}
+.tooltiptext{
+    z-index: 1;
+    background-color: red;
+    width:150px;
+    font-size: large;
+    padding: 5px;
+    border-radius: 7px;
+    position: absolute;
+    top: -40px;
+    left: 10px;
+}
