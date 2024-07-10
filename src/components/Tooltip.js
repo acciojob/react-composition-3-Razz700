@@ -23,12 +23,13 @@ const Tooltip = (props) => {
   return (
     <div>
         <div className='now'>
-        {check1 && <p className='tooltiptext'>{props.text.first}</p>} 
-        <h2 onMouseEnter={()=>handle_enter('first')} onMouseLeave={()=>handleleave('first')} className='tooltip'>{props.children.first}</h2>
+       
+        <h2 onMouseEnter={()=>handle_enter('first')} onMouseLeave={()=>handleleave('first')} className='tooltip'>
+        {check1 && <div className='tooltiptext'>{props.text.first}</div>}  {props.children.first}</h2>
         </div>
         <div className='now'>
-        {check2 && <p className='tooltiptext'>{props.text.second}</p>}
-        <p onMouseEnter={()=>{handle_enter('second')}} onMouseLeave={()=>{ handleleave('second')}} className='tooltip'>{props.children.second}</p>
+        <p onMouseEnter={()=>{handle_enter('second')}} onMouseLeave={()=>{ handleleave('second')}} className='tooltip'>
+        {check2 && <div className='tooltiptext'>{props.text.second}</div>}{props.children.second}</p>
         </div>
     </div>
   )
