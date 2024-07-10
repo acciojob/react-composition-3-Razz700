@@ -25,11 +25,11 @@ const Tooltip = (props) => {
        
        
         <h2 onMouseEnter={()=>handle_enter('first')} onMouseLeave={()=>handleleave('first')} className='tooltip'>
-        <div className={check1} >{props.text.first}</div> {props.children.first}</h2>
+        <div> <div className={check1} >{props.text.first}</div></div> {props.children.first}</h2>
         
         
         <p onMouseEnter={()=>{handle_enter('second')}} onMouseLeave={()=>{ handleleave('second')}} className='tooltip'>
-        <div className={check2} >{props.text.second}</div>{props.children.second}</p>
+        <div><div className={check2} >{props.text.second}</div></div>{props.children.second}</p>
        
     </div>
   )
